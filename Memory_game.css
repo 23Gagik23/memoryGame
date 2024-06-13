@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    font-family: "Ubuntu Sans Mono", monospace;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+body {
+    background-image: url(Images/wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+
+    margin-top: 20px;
+    
+
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: center;
+    align-content: center;
+    width: 40%;
+
+}
+
+.box {
+    width: 70px;
+    height: 85px;
+    perspective: 1000px;
+    cursor: pointer;
+
+   
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+}
+
+.box.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    background-color:rgba(11, 65, 116, 0.795);
+    color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.back {
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    background-color: rgb(230, 242, 252);
+    border: 2px solid black;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:  2px solid black;
+    width: 180px;
+    height: 90px;
+    background-color: rgba(11, 65, 116, 0.934);
+    border-radius: 25px;
+    font-size: 19px;
+    color: white;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.429);
+   
+    
+}
+
+
+
+img {
+    width: 50px;
+    height: 50px ;
+   
+}
+
+#back-to-menu-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color:  rgb(244, 244, 244);
+  color:rgba(11, 65, 116, 0.934);
+  cursor: pointer;
+  transition: background-color 0.3s;
+ margin-left:40px ;
+ margin-right: 40px;
+ margin-top: 20px;
+  
+  border: 1px solid rgb(208, 208, 208);
+  box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.429);
+  text-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.5);
+  transition: all linear 300ms;
+
+}
+
+#back-to-menu-button:hover {
+  background-color: rgba(11, 65, 116, 0.941);
+  color: white;
+  border: 1px solid black;
+  transition: all linear 300ms;
+  box-shadow: 3px 3px 10px rgba(11, 65, 116, 0.934);
+  
+  
+}
+
+#rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Ensures the rain does not interfere with game interactions */
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    bottom: 100%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+

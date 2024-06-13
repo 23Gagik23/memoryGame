@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    font-family: "Ubuntu Sans Mono", monospace;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: rgb(107, 0, 128);
+    z-index: 2;
+}
+
+
+
+#popUp{
+    width: 400px;
+    height: 250px;
+    background-color: rgb(251, 251, 251);
+    position: absolute;
+    margin-top: 140px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    box-shadow: 2px 2px 8px 5px white;
+    color: rgb(0, 0, 0);
+    visibility: hidden;
+    
+}
+
+#popUp_p{
+    margin-top: 70px;
+    padding-bottom: 15px;
+}
+
+
+span{
+    font-size: 15px;
+}
+
+.popUp_input{
+
+    outline: none;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 4px;
+    width: 50px;
+    border-radius: 8px;
+
+}
+
+#popUp_btn{
+    padding: 5px;
+    width: 70px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(11, 65, 116, 0.947);
+    color: white;
+    transition: all 200ms ease;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#popUp_btn:hover{
+    transition: all 200ms ease;
+    background-color: rgb(6, 57, 105);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 1px rgba(11, 65, 116, 0.751);
+   
+}
+
+
+.start_page{
+    display: flex;
+    justify-content: center;
+
+}
+
+.opacity{
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 54, 161, 0.199);
+    position: absolute;
+    z-index: -1;
+    /* backdrop-filter: blur(8px) */
+}
+
+.start-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px  1px 10px rgba(226, 226, 226, 0.377);
+    gap: 10px;
+    margin-top: 140px;     
+    background-color:rgba(1, 67, 129, 0.575); 
+    border: 2px solid black
+}
+#start_game_p{
+    margin-bottom: 20px;
+    color: #efefef;
+    font-size: 45px;
+   text-shadow: 3px 3px 4px rgba(173, 173, 173, 0.468);
+}
+
+#start-button {
+    padding: 10px 15px;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.253);
+    transition: all 400ms ease;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.603);
+    margin-bottom: 20px ;
+    
+}
+
+#start-button:hover {
+    background-color: white;
+    color: #45a049 ;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.253);
+    transition: all 400ms ease;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.368);
+ 
+  
+}
+
+
+.circles{
+    position: absolute;
+    width: 96%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    border-radius: 10px;
+    animation: animate 25s linear infinite;
+    bottom: -180px;
+   
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 70px;
+    height: 85px;
+    animation-delay: 0s;
+    background-color:rgba(11, 65, 116, 0.947);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 50px;
+    height: 80px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    background-color:rgba(11, 65, 116, 0.973);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    left: 50%;
+    width: 50px;
+    height: 80px;
+    animation-delay: 4s;
+    background-color:rgba(11, 65, 116, 0.959);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 90px;
+    height: 110px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+    background-color:rgba(11, 65, 116, 0.966);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 80px;
+    height: 120px;
+    animation-delay: 0s;
+    background-color:rgba(11, 65, 116, 0.938);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 90px;
+    height: 130px;
+    animation-delay: 3s;
+    background-color:rgba(11, 65, 116, 0.968);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 110px;
+    height: 160px;
+    animation-delay: 7s;
+    background-color:rgba(11, 65, 116, 0.941);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 40px;
+    height: 70px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+    background-color:rgba(11, 65, 116, 0.925);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 40px;
+    height: 70px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    background-color:rgba(11, 65, 116, 0.979);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 130px;
+    height: 170px;
+    animation-delay: 1s;
+    animation-duration: 11s;
+    background-color:rgba(11, 65, 116, 0.979);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2{
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.circles_2 li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    border-radius: 10px;
+    animation: animate2 25s linear infinite;
+    top: -180px;
+   
+}
+
+.circles_2 li:nth-child(1){
+    left: 85%;
+    width: 70px;
+    height: 85px;
+    animation-delay: 0s;
+    background-color:rgba(11, 65, 116, 0.947);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.circles_2 li:nth-child(2){
+    left: 20%;
+    width: 50px;
+    height: 80px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    background-color:rgba(11, 65, 116, 0.973);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2 li:nth-child(3){
+    left: 40%;
+    width: 50px;
+    height: 80px;
+    animation-delay: 4s;
+    background-color:rgba(11, 65, 116, 0.959);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2 li:nth-child(4){
+    
+    left: 75%;
+    width: 90px;
+    height: 110px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+    background-color:rgba(11, 65, 116, 0.966);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2 li:nth-child(5){
+    left: 55%;
+    width: 80px;
+    height: 120px;
+    animation-delay: 0s;
+    background-color:rgba(11, 65, 116, 0.938);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2 li:nth-child(6){
+    
+    left: 40%;
+    width: 90px;
+    height: 130px;
+    animation-delay: 3s;
+    background-color:rgba(11, 65, 116, 0.968);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.circles_2 li:nth-child(7){
+    left: 35%;
+    width: 110px;
+    height: 160px;
+    animation-delay: 7s;
+    background-color:rgba(11, 65, 116, 0.941);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2 li:nth-child(8){
+   
+    left: 70%;
+    width: 40px;
+    height: 70px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+    background-color:rgba(11, 65, 116, 0.925);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.circles_2 li:nth-child(9){
+    
+    left: 10%;
+    width: 40px;
+    height: 70px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    background-color:rgba(11, 65, 116, 0.979);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.circles_2 li:nth-child(10){
+   
+    left: 25%;
+    width: 130px;
+    height: 170px;
+    animation-delay: 1s;
+    animation-duration: 11s;
+    background-color:rgba(11, 65, 116, 0.979);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0);
+            opacity: 1;
+       
+    }
+
+    100%{
+        transform:translateY(-1000px) rotate(720deg);
+        opacity: 0;
+       
+    }
+}
+
+@keyframes animate2 {
+
+    0%{
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+       
+    }
+
+    100%{
+        transform:translateY(1000px) rotate(720deg);
+        opacity: 0;
+       
+    }
+
+}
